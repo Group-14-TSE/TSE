@@ -1,3 +1,5 @@
+#hello
+
 f = open("Test_Network_1.txt", "r")
 f.readline()
 l = []
