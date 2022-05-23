@@ -93,8 +93,6 @@ passwords = returnPasswords(l)
 print(passwords)
 passwordsBool = returnPasswordsBool(l)
 print(passwordsBool)
-#for i in range(len(passwordsBool)):
-#    print(passwords[i], passwordsBool[i])
 passwordsBoolCheck(passwords, passwordsBool)
 portsBool = returnPortsBool(l)
 ports = returnPorts(l)
