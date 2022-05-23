@@ -52,9 +52,9 @@ def returnPasswordsBool(listy):
     for i in range(0, len(listy)):
         if len(listy[i]) >= 6:
             if listy[i][5] != "N/A":
-                passwordsBool.append(True)
+                passwordsBool.append(1)
             else:
-                passwordsBool.append(False)
+                passwordsBool.append(0)
     return passwordsBool
 
 def passwordsBoolCheck(passwords, bools):
@@ -73,9 +73,9 @@ def returnPortsBool(listy):
     for i in range(0, len(listy)):
         if len(listy[i]) != 0:
             if listy[i][2] != "N/A":
-                portsBool.append(True)
+                portsBool.append(1)
             else:
-                portsBool.append(False)
+                portsBool.append(0)
     return portsBool
 
 def portsBoolCheck(ports, bools):
@@ -90,9 +90,7 @@ def portsBoolCheck(ports, bools):
 #printPassword(l)
 #printAll(l)
 passwords = returnPasswords(l)
-print(passwords)
 passwordsBool = returnPasswordsBool(l)
-print(passwordsBool)
 passwordsBoolCheck(passwords, passwordsBool)
 portsBool = returnPortsBool(l)
 ports = returnPorts(l)
