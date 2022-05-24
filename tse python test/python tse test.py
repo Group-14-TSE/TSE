@@ -18,7 +18,7 @@ for lines in file:
 
 for lines in file:
     strength.append(lines[1])
-
+#
 def values(listy):
     result = []
 
