@@ -108,9 +108,40 @@ def training(l, strenght):
 
 #training(l, strength)
 
+def openTestFile():
+    f = open("Test_Network_1.txt")
+    f.readline()
+    file = []
+    for lines in f:
+        file.append(tuple(map(str, lines.split())))
+    print(file)
+    return file
+    
 def testInput():
-    f = open
+    file = openTestFile()
+    passwords = []
+    for lines in file:
+        if len(lines) > 0:
+            passwords.append(lines[5])
+    for i in range(len(passwords)):
+        print(passwords[i], len(passwords[i]))
+    return passwords
 
+
+def writeToFile(outcome):
+    f = open("network security posture.txt", "w")
+    #f.write("ok this is cool")
+    file = openTestFile()
+    line = 0
+    for i in range(len(outcome)):
+        if len(file[i]) > 0:
+            f.write(file[i][0])
+            f.write(" ")
+            f.write(file[i][5])
+            f.write(" ")
+            f.write(outcome[line])
+            f.write("\n")
+            line += 1
 
 
 
@@ -118,7 +149,8 @@ def testing(l):
     model = load_model('tfmodel')
     print("loaded")
 
-    testData = values(l)
+    testData = values(testInput())
+    
     
     predictions = model.predict(testData)
     outcome = []
@@ -133,6 +165,8 @@ def testing(l):
         else:
             print("something is wrong")
     print(outcome)
+    writeToFile(outcome)
+    
 
 
 
