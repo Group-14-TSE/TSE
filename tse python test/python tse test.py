@@ -4,6 +4,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
+from tensorflow.keras.models import load_model
 #from sklearn.metrics import accuracy_score
 
 f = open("Passwords.txt", "r")
@@ -18,7 +19,7 @@ for lines in file:
 
 for lines in file:
     strength.append(lines[1])
-#
+
 def values(listy):
     result = []
 
@@ -46,6 +47,9 @@ def values(listy):
 
         if len(i) > 8:
             length = 1
+            
+        if i == "N/A":
+            length = lowercase = uppercase = number = symbol = 0
 
         result.append((length, lowercase, uppercase, number, symbol))
     return result
@@ -64,36 +68,73 @@ def strengthValues(listy):
 
 
 
+def training(l, strenght):
+    inputValues = values(l)
+    print(inputValues)
+    targets = strengthValues(strength)
+    print(targets)
 
-inputValues = values(l)
-print(inputValues)
-targets = strengthValues(strength)
-print(targets)
+    x_train, x_test, y_train, y_test = train_test_split(inputValues, targets, test_size=0.2, random_state=0)
 
-x_train, x_test, y_train, y_test = train_test_split(inputValues, targets, test_size=0.2, random_state=0)
+    print(x_train)
+    print(y_train)
 
-print(x_train)
-print(y_train)
+    inputs = keras.Input(shape = (5,))
+    dense = layers.Dense(8, activation= "relu")
+    dense_1 = layers.Dense(8, activation= "relu")
+    dense_2 = layers.Dense(3, activation= "sigmoid")
 
-inputs = keras.Input(shape = (5,))
-dense = layers.Dense(8, activation= "relu")
-dense_1 = layers.Dense(8, activation= "relu")
-dense_2 = layers.Dense(3, activation= "sigmoid")
+    x = dense(inputs)
+    x = dense_1(x)
+    outputs = dense_2(x)
 
-x = dense(inputs)
-x = dense_1(x)
-outputs = dense_2(x)
+    model = keras.Model(inputs=inputs, outputs=outputs, name="test_model")
+    model.summary()
 
-model = keras.Model(inputs=inputs, outputs=outputs, name="test_model")
-model.summary()
+    model.compile(loss='binary_crossentropy', optimizer='sgd', metrics='accuracy')
+    model.fit(x_train, y_train, batch_size=5, epochs=1000)
 
-model.compile(loss='binary_crossentropy', optimizer='sgd', metrics='accuracy')
-model.fit(x_train, y_train, epochs=2000, batch_size=5)
+    y_hat = model.predict(x_test)
+    #y_hat = [0 if val < 0.5 else 1 for val in y_hat]
 
-y_hat = model.predict(x_test)
-#y_hat = [0 if val < 0.5 else 1 for val in y_hat]
+    #accuracy_score(y_test, y_hat)
 
-#accuracy_score(y_test, y_hat)
+    model.save('tfmodel')
 
-model.save('tfmodel')
-print("done")
+    del model
+
+    model = load_model('tfmodel')
+    print("done")
+
+#training(l, strength)
+
+def testInput():
+    f = open
+
+
+
+
+def testing(l):
+    model = load_model('tfmodel')
+    print("loaded")
+
+    testData = values(l)
+    
+    predictions = model.predict(testData)
+    outcome = []
+
+    for i in range(len(predictions)):
+        if predictions[i][0] > predictions[i][1] and predictions[i][0] > predictions[i][2]:
+            outcome.append("weak")
+        elif predictions[i][1] > predictions[i][0] and predictions[i][1] > predictions[i][2]:
+            outcome.append("medium")
+        elif predictions[i][2] > predictions[i][0] and predictions[i][2] > predictions[i][1]:
+            outcome.append("strong")
+        else:
+            print("something is wrong")
+    print(outcome)
+
+
+
+    
+testing(l)
