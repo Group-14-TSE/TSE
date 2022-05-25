@@ -1,32 +1,99 @@
-pc2 password weak
-pc3 password weak
-pc4 password weak
-pc5 password weak
-pc6 password weak
-pc7 password weak
-S1g0/0 Admin medium
-S1g0/1 Admin medium
-R1g0/0 Cisco123! strong
-R1g0/1 Cisco123! strong
-R1s0/0 Cisco123! strong
-R1s0/1 Cisco123! strong
-pc8 123 weak
-pc9 123 weak
-pc10 123 weak
-pc11 123 weak
-pc12 123 weak
-pc13 123 weak
-pc14 123 weak
-S2g0/0 daph8tEbiB strong
-S2g0/1 daph8tEbiB strong
-R2g0/0 Router1 medium
-R2g0/1 Router1 medium
-R2s0/0 bakihufr weak
-R2s0/1 +od!ivic medium
-pc15 N/A weak
-pc16 N/A weak
-pc17 N/A weak
-pc18 N/A weak
-pc19 N/A weak
-pc20 N/A weak
-pc21 N/A weak
+pc1  password  weak
+PACTA predicts this is very likeley to be attacked
+
+pc2  password  weak
+PACTA predicts this is very likeley to be attacked
+
+pc3  password  weak
+PACTA predicts this is very likeley to be attacked
+
+pc4  password  weak
+PACTA predicts this is very likeley to be attacked
+
+pc5  password  weak
+PACTA predicts this is very likeley to be attacked
+
+pc6  password  weak
+PACTA predicts this is very likeley to be attacked
+
+pc7  password  weak
+PACTA predicts this is very likeley to be attacked
+
+S1g0/0  Admin  medium
+PACTA predicts this is likely to be attacked
+
+S1g0/1  Admin  medium
+PACTA predicts this is likely to be attacked
+
+R1g0/0  Cisco123!  strong
+PACTA predicts this is very unlikely to be attacked
+
+R1g0/1  Cisco123!  strong
+PACTA predicts this is very unlikely to be attacked
+
+R1s0/0  Cisco123!  strong
+PACTA predicts this is very unlikely to be attacked
+
+R1s0/1  Cisco123!  strong
+PACTA predicts this is very unlikely to be attacked
+
+pc8  123  weak
+PACTA predicts this is very likeley to be attacked
+
+pc9  123  weak
+PACTA predicts this is very likeley to be attacked
+
+pc10  123  weak
+PACTA predicts this is very likeley to be attacked
+
+pc11  123  weak
+PACTA predicts this is very likeley to be attacked
+
+pc12  123  weak
+PACTA predicts this is very likeley to be attacked
+
+pc13  123  weak
+PACTA predicts this is very likeley to be attacked
+
+pc14  123  weak
+PACTA predicts this is very likeley to be attacked
+
+S2g0/0  daph8tEbiB  strong
+PACTA predicts this is very unlikely to be attacked
+
+S2g0/1  daph8tEbiB  strong
+PACTA predicts this is very unlikely to be attacked
+
+R2g0/0  Router1  medium
+PACTA predicts this is likely to be attacked
+
+R2g0/1  Router1  medium
+PACTA predicts this is likely to be attacked
+
+R2s0/0  bakihufr  weak
+PACTA predicts this is very likeley to be attacked
+
+R2s0/1  +od!ivic  medium
+PACTA predicts this is likely to be attacked
+
+pc15  N/A  weak
+PACTA predicts this port to be a likely candiate for the attackers to begin
+
+pc16  N/A  weak
+PACTA predicts this port to be a likely candiate for the attackers to begin
+
+pc17  N/A  weak
+PACTA predicts this port to be a likely candiate for the attackers to begin
+
+pc18  N/A  weak
+PACTA predicts this port to be a likely candiate for the attackers to begin
+
+pc19  N/A  weak
+PACTA predicts this port to be a likely candiate for the attackers to begin
+
+pc20  N/A  weak
+PACTA predicts this port to be a likely candiate for the attackers to begin
+
+pc21  N/A  weak
+PACTA predicts this port to be a likely candiate for the attackers to begin
+

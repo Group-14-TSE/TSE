@@ -1,3 +1,4 @@
+
 pc1 password
 pc2 password
 pc3 password
@@ -38,12 +39,12 @@ pc19 N/A
 pc20 N/A
 pc21 N/A
 
-S2g0/0 yAc@l1rLfR
-S2g0/1 p_o5#Bu8Hl
+S3g0/0 yAc@l1rLfR
+S3g0/1 p_o5#Bu8Hl
 
-R2g0/0 Ylbr?9r
-R2g0/1 Ylbr?9r
-R2s0/0 6Em_ClXAp!O6rlmowL8l
-R2s0/1 6Em_ClXAp!O6rlmowL8l
+R3g0/0 Ylbr?9r
+R3g0/1 Ylbr?9r
+R3s0/0 6Em_ClXAp!O6rlmowL8l
+R3s0/1 6Em_ClXAp!O6rlmowL8l
 
 

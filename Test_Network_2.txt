@@ -1,3 +1,4 @@
+
 pc1 password
 pc2 password
 pc3 password
@@ -38,12 +39,12 @@ pc19 N/A
 pc20 N/A
 pc21 N/A
 
-S2g0/0 N/A 
-S2g0/1 N/A
+S3g0/0 N/A 
+S3g0/1 N/A
 
-R2g0/0 N/A
-R2g0/1 N/A
-R2s0/0 N/A
-R2s0/1 N/A
+R3g0/0 N/A
+R3g0/1 N/A
+R3s0/0 N/A
+R3s0/1 N/A
 
 

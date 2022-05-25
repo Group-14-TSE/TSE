@@ -151,7 +151,7 @@ def testInput(name):
     passwords = []
     for lines in file:
         if len(lines) > 0:
-            passwords.append(lines[1]) #### change from 5 to 1 with new data set
+            passwords.append(lines[1]) 
     return passwords
 
 ## writes password strengths to file.
@@ -163,14 +163,25 @@ def writeToFile(outcome,name):
         if len(file[i]) > 0:
             # writes device name.
             f.write(file[i][0])
-            f.write(" ")
+            f.write("  ")
             # writes password.
-            f.write(file[i][1]) #### change from 5 to 1 with new data set
-            f.write(" ")
+            f.write(file[i][1])
+            f.write("  ")
             # writes password strength.
             f.write(outcome[line])
             f.write("\n")
+            if file[i][1] == "N/A": 
+                f.write("PACTA predicts this port to be a likely candiate for the attackers to begin")
+            else:
+                if outcome[line] == "weak":
+                 f.write(("PACTA predicts this is very likeley to be attacked"))
+                elif outcome[line] == "medium":
+                    f.write(("PACTA predicts this is likely to be attacked"))
+                elif outcome[line] == "strong":
+                    f.write(("PACTA predicts this is very unlikely to be attacked"))
             line += 1
+            f.write("\n")
+            f.write("\n")    
     print("Network Scurity Posture.txt has been updated with your results")
             
 

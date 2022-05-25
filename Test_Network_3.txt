@@ -1,3 +1,4 @@
+
 pc1 1r0=Ras-is
 pc2 1r0=Ras-is
 pc3 1r0=Ras-is
@@ -5,15 +6,12 @@ pc4 1r0=Ras-is
 pc5 1r0=Ras-is
 pc6 1r0=Ras-is
 pc7 1r0=Ras-is
-
 S1g0/0 sw=theT757anujL
 S1g0/1 sw=theT757anujL
-
 R1g0/0 vUDraKIswiTh2*1NIbE3
 R1g0/1 vUDraKIswiTh2*1NIbE3
 R1s0/0 vUDraKIswiTh2*1NIbE3
 R1s0/1 vUDraKIswiTh2*1NIbE3
-
 pc8 th=1ut#SPL
 pc9 th=1ut#SPL
 pc10 th=1ut#SPL
@@ -21,15 +19,12 @@ pc11 th=1ut#SPL
 pc12 th=1ut#SPL
 pc13 th=1ut#SPL
 pc14 th=1ut#SPL
-
 S2g0/0 tR-swab@7?RiPH9
 S2g0/1 tR-swab@7?RiPH9
-
 R2g0/0 soTRe5?POSWe07pH*?Lr
 R2g0/1 soTRe5?POSWe07pH*?Lr
 R2s0/0 soTRe5?POSWe07pH*?Lr
 R2s0/1 soTRe5?POSWe07pH*?Lr
-
 pc15 yi@2hE&We
 pc16 yi@2hE&We
 pc17 yi@2hE&We
@@ -37,13 +32,11 @@ pc18 yi@2hE&We
 pc19 yi@2hE&We
 pc20 yi@2hE&We
 pc21 yi@2hE&We
-
-S2g0/0 chlx62*COPOb?
-S2g0/1 chlx62*COPOb?
-
-R2g0/0 fri4o+ikija3Ododas
-R2g0/1 123
-R2s0/0 fri4o+ikija3Ododas
-R2s0/1 fri4o+ikija3Ododas
+S3g0/0 chlx62*COPOb?
+S3g0/1 chlx62*COPOb?
+R3g0/0 fri4o+ikija3Ododas
+R3g0/1 123
+R3s0/0 fri4o+ikija3Ododas
+R3s0/1 fri4o+ikija3Ododas
 
 
