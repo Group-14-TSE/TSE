@@ -200,7 +200,8 @@ def testing():
 
     # writes to file.
     writeToFile(outcome)
-    
+
+# allows for user to chose what they would like to do.
 def menu():
     done = False
     while done == False:
