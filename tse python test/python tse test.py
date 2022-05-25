@@ -203,13 +203,15 @@ def testing():
 def menu():
     done = False
     while done == False:
-        choice = input("please enter whether you would like to 'train' or 'test' the neural network. /n or if you are finished please enter 'quit'.")
-        user_input = choice.tolower()
+        print("Please enter whether you would like to 'train' or 'test' the neural network. ")
+        print("**NOTE** If the network has already been trained then training is not necessary")
+        choice = input("If you are finished please enter 'quit' or 'q'.")
+        user_input = choice.lower()
         if user_input == "train":
             training()
         elif user_input == "test":
             testing()
-        elif user_input == "quit":
+        elif user_input == "quit" or user_input == "q":
             done = True
         else:
             print("input is invalid")
