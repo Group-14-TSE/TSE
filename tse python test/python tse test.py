@@ -130,7 +130,7 @@ def training():
     model.compile(loss='binary_crossentropy', optimizer='sgd', metrics='accuracy')
 
     #trains the neural network.
-    model.fit(x_train, y_train, batch_size=5, epochs=1000)
+    model.fit(x_train, y_train, batch_size=5, epochs=2000)
 
     # saves the neural network
     model.save('tfmodel')
@@ -214,5 +214,5 @@ def menu():
         else:
             print("input is invalid")
 
-
+print("ok")
 menu()
