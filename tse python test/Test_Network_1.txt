@@ -1,52 +1,49 @@
-name, port, ip, subnet, default gateway, password
+pc1 password
+pc2 password
+pc3 password
+pc4 password
+pc5 password
+pc6 password
+pc7 password
 
-pc1 g0/1 192.168.1.1 255.255.255.0 192.168.3.1 N/A
-pc2 g0/1 192.168.1.2 255.255.255.0 192.168.3.1 N/A
-pc3 g0/1 192.168.1.3 255.255.255.0 192.168.3.1 N/A
-pc4 g0/1 192.168.1.4 255.255.255.0 192.168.3.1 N/A
-pc5 g0/1 192.168.1.5 255.255.255.0 192.168.3.1 N/A
+S1g0/0 Admin
+S1g0/1 Admin
 
+R1g0/0 Cisco123!
+R1g0/1 Cisco123!
+R1s0/0 Cisco123!
+R1s0/1 Cisco123!
 
-pc1 g0/1 192.168.2.1 255.255.255.0 192.168.4.1 N/A
-pc2 g0/1 192.168.2.2 255.255.255.0 192.168.4.1 N/A
-pc3 g0/1 192.168.2.3 255.255.255.0 192.168.4.1 N/A
-pc4 g0/1 192.168.2.4 255.255.255.0 192.168.4.1 N/A
-pc5 g0/1 192.168.2.5 255.255.255.0 192.168.4.1 N/A
+pc8 123
+pc9 123
+pc10 123
+pc11 123
+pc12 123
+pc13 123
+pc14 123
 
+S2g0/0 daph8tEbiB
+S2g0/1 daph8tEbiB
 
-pc1 g0/1 192.168.3.1 255.255.255.0 192.168.5.1 N/A
-pc2 g0/1 192.168.3.2 255.255.255.0 192.168.5.1 N/A
-pc3 g0/1 192.168.3.3 255.255.255.0 192.168.5.1 N/A
-pc4 g0/1 192.168.3.4 255.255.255.0 192.168.5.1 N/A
-pc5 g0/1 192.168.3.5 255.255.255.0 192.168.5.1 N/A
- 
+R2g0/0 Router1
+R2g0/1 Router1
+R2s0/0 bakihufr
+R2s0/1 +od!ivic
 
-R1 g0/1 192.168.3.1 255.255.255.255 N/A Cisco
-R1 g0/2 N/A N/A N/A N/A
-R1 s0/1 192.168.5.1 255.255.255.255 N/A Cisco
-R1 s0/2 192.168.5.2 255.255.255.255 N/A Cisco
+pc15 N/A
+pc16 N/A
+pc17 N/A
+pc18 N/A
+pc19 N/A
+pc20 N/A
+pc21 N/A
 
+S2g0/0 yAc@l1rLfR
+S2g0/1 p_o5#Bu8Hl
 
-R2 g0/1 192.168.4.1 255.255.255.255 N/A Cisco
-R2 g0/2 N/A N/A N/A N/A
-R2 s0/1 192.168.6.1 255.255.255.255 N/A Cisco
-R2 s0/2 192.168.6.2 255.255.255.255 N/A Cisco
+R2g0/0 Ylbr?9r
+R2g0/1 Ylbr?9r
+R2s0/0 6Em_ClXAp!O6rlmowL8l
+R2s0/1 6Em_ClXAp!O6rlmowL8l
 
-
-R3 g0/1 192.168.5.1 255.255.255.255 N/A Cisco
-R3 g0/2 N/A N/A N/A N/A
-R3 s0/1 192.168.7.1 255.255.255.255 N/A Cisco
-R3 s0/2 192.168.7.2 255.255.255.255 N/A Cisco
-
-
-S1 g0/1 N/A N/A N/A Cisco
-S1 g0/2 N/A N/A N/A Cisco
-
-
-S2 g0/1 N/A N/A N/A Cisco
-S2 g0/2 N/A N/A N/A Cisco
-
-
-S3 g0/1 N/A N/A N/A Cisco
-S3 g0/2 N/A N/A N/A Cisco
 

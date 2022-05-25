@@ -136,9 +136,9 @@ def training():
     del model
 
 
-def openTestFile():
+def openTestFile(name):
     # opens up test file.
-    f = open("Test_Network_1.txt")
+    f = open(name)
     f.readline()
     file = []
     # adds all data to list of tuples.
@@ -146,18 +146,18 @@ def openTestFile():
         file.append(tuple(map(str, lines.split())))
     return file
     
-def testInput():
-    file = openTestFile()
+def testInput(name):
+    file = openTestFile(name)
     passwords = []
     for lines in file:
         if len(lines) > 0:
-            passwords.append(lines[5]) #### change from 5 to 1 with new data set
+            passwords.append(lines[1]) #### change from 5 to 1 with new data set
     return passwords
 
 ## writes password strengths to file.
-def writeToFile(outcome):
+def writeToFile(outcome,name):
     f = open("network security posture.txt", "w")
-    file = openTestFile()
+    file = openTestFile(name)
     line = 0
     for i in range(len(outcome)):
         if len(file[i]) > 0:
@@ -165,7 +165,7 @@ def writeToFile(outcome):
             f.write(file[i][0])
             f.write(" ")
             # writes password.
-            f.write(file[i][5]) #### change from 5 to 1 with new data set
+            f.write(file[i][1]) #### change from 5 to 1 with new data set
             f.write(" ")
             # writes password strength.
             f.write(outcome[line])
@@ -181,7 +181,22 @@ def testing():
     model = load_model('tfmodel')
 
     # sets test input data.
-    testData = values(testInput())
+    choosing = True
+    while choosing == True:
+        user_input = int(input("\nYou have a choice of 3 test files, these are:\n1 - Test_Network_1\n2 - Test_Network_2\n3 - Test_Network_3\nPlease enter your choice :"))
+        if user_input == 1:
+            name = "Test_Network_1.txt"
+            choosing = False
+        elif user_input == 2:
+            name = "Test_Network_2.txt"
+            choosing = False
+        elif user_input == 3:
+            name = "Test_Network_3.txt"
+            choosing = False
+        else:
+            print("INVALID INPUT, TRY AGAIN")
+        
+    testData = values(testInput(name))
     
     # predicts password strength.
     predictions = model.predict(testData)
@@ -198,14 +213,14 @@ def testing():
             outcome.append("strong")
 
     # writes to file.
-    writeToFile(outcome)
+    writeToFile(outcome,name)
     
 def menu():
     done = False
     while done == False:
-        print("Please enter whether you would like to 'train' or 'test' the neural network. ")
+        print("\nPlease enter whether you would like to 'train' or 'test' the neural network. ")
         print("**NOTE** If the network has already been trained then training is not necessary")
-        choice = input("If you are finished please enter 'quit' or 'q'.")
+        choice = input("If you are finished please enter 'quit' or 'q'.\n")
         user_input = choice.lower()
         if user_input == "train":
             training()
