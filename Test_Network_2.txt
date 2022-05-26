@@ -5,16 +5,13 @@ pc3 password
 pc4 password
 pc5 password
 pc6 password
-pc7 password
-
+pc7 N/A
 S1g0/0 Admin
 S1g0/1 Admin
-
 R1g0/0 Cisco123!
 R1g0/1 Cisco123!
 R1s0/0 Cisco123!
 R1s0/1 Cisco123!
-
 pc8 123
 pc9 123
 pc10 123
@@ -22,15 +19,12 @@ pc11 123
 pc12 123
 pc13 123
 pc14 123
-
 S2g0/0 Switch1
 S2g0/1 Switch1
-
 R2g0/0 Router1
 R2g0/1 Router1
 R2s0/0 Router1
 R2s0/1 Router1
-
 pc15 N/A
 pc16 N/A
 pc17 N/A
@@ -38,10 +32,8 @@ pc18 N/A
 pc19 N/A
 pc20 N/A
 pc21 N/A
-
 S3g0/0 N/A 
 S3g0/1 N/A
-
 R3g0/0 N/A
 R3g0/1 N/A
 R3s0/0 N/A
