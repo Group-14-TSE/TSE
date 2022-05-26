@@ -127,8 +127,13 @@ def training():
     # sets the training parameters of the neural network.
     model.compile(loss='binary_crossentropy', optimizer='sgd', metrics='accuracy')
 
-    #trains the neural network.
+    # trains the neural network.
     model.fit(x_train, y_train, batch_size=5, epochs=1000)
+
+    # allows for the effectiveness of the neural network to be viewed.
+    test_scores = model.evaluate(x_test, y_test)
+    print("Test loss:", test_scores[0])
+    print("Test accuracy:", test_scores[1])
 
     # saves the neural network
     model.save('tfmodel')
